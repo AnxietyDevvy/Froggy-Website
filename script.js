@@ -11,6 +11,9 @@ const frog = document.getElementById('frog');
 const frogCard = document.getElementById('frogCard');
 const factList = document.getElementById('factList');
 const mushrooms = document.querySelectorAll('.mushroom');
+const gallerySlides = document.querySelectorAll('.frog-photo-card');
+const galleryPrev = document.getElementById('galleryPrev');
+const galleryNext = document.getElementById('galleryNext');
 
 let petCount = 0;
 let feedCount = 0;
@@ -30,6 +33,9 @@ const sounds = {
   feed: 'https://actions.google.com/sounds/v1/animals/frog_snort.ogg',
   click: 'https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg'
 };
+
+let activeSlideIndex = 0;
+let slideIntervalId = null;
 
 function playSound(type) {
   const audio = new Audio(sounds[type]);
@@ -62,6 +68,31 @@ function updateFrogAppearance(name) {
 
 function showStatus(message) {
   statusBox.textContent = message;
+}
+
+function setActiveSlide(index) {
+  if (!gallerySlides.length) {
+    return;
+  }
+
+  activeSlideIndex = (index + gallerySlides.length) % gallerySlides.length;
+  gallerySlides.forEach((slide, slideIndex) => {
+    slide.classList.toggle('is-active', slideIndex === activeSlideIndex);
+  });
+}
+
+function startSlideShow() {
+  if (!gallerySlides.length) {
+    return;
+  }
+
+  if (slideIntervalId) {
+    clearInterval(slideIntervalId);
+  }
+
+  slideIntervalId = setInterval(() => {
+    setActiveSlide(activeSlideIndex + 1);
+  }, 3400);
 }
 
 petButton.addEventListener('click', () => {
@@ -119,5 +150,21 @@ modeToggle.addEventListener('click', () => {
   playSound('click');
 });
 
+if (galleryPrev) {
+  galleryPrev.addEventListener('click', () => {
+    setActiveSlide(activeSlideIndex - 1);
+    startSlideShow();
+  });
+}
+
+if (galleryNext) {
+  galleryNext.addEventListener('click', () => {
+    setActiveSlide(activeSlideIndex + 1);
+    startSlideShow();
+  });
+}
+
 updateFrogAppearance(currentFrog);
 updateStats();
+setActiveSlide(0);
+startSlideShow();

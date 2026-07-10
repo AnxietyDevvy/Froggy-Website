@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Cute frog on lily pad</title>
+  <desc id="d">A smiling green frog sitting on a lily pad with soft sky colors.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dff6ff"/>
+      <stop offset="100%" stop-color="#98d8c8"/>
+    </linearGradient>
+    <radialGradient id="pad" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#9edb84"/>
+      <stop offset="100%" stop-color="#4f8e5b"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <ellipse cx="400" cy="390" rx="260" ry="82" fill="url(#pad)"/>
+  <ellipse cx="400" cy="280" rx="145" ry="108" fill="#75bf67"/>
+  <circle cx="335" cy="210" r="44" fill="#75bf67"/>
+  <circle cx="465" cy="210" r="44" fill="#75bf67"/>
+  <circle cx="335" cy="210" r="22" fill="#fff"/>
+  <circle cx="465" cy="210" r="22" fill="#fff"/>
+  <circle cx="338" cy="212" r="10" fill="#213c33"/>
+  <circle cx="468" cy="212" r="10" fill="#213c33"/>
+  <ellipse cx="400" cy="300" rx="72" ry="48" fill="#e8f7df"/>
+  <path d="M355 317 Q400 350 445 317" fill="none" stroke="#2c4b41" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="270" cy="290" r="16" fill="#75bf67"/>
+  <circle cx="530" cy="290" r="16" fill="#75bf67"/>
+  <text x="400" y="70" font-size="40" text-anchor="middle" fill="#2d5b4f" font-family="Verdana, sans-serif">Leaf Lounger</text>
+</svg>

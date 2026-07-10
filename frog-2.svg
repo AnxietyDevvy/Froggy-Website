@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Cute frog by pond</title>
+  <desc id="d">A tiny frog near water with bubbles and reeds.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7fbf7"/>
+      <stop offset="100%" stop-color="#8ccfc2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect y="340" width="800" height="160" fill="#79b5bb"/>
+  <rect x="110" y="245" width="14" height="100" rx="7" fill="#6fa65d"/>
+  <rect x="145" y="230" width="14" height="115" rx="7" fill="#6fa65d"/>
+  <rect x="675" y="250" width="14" height="95" rx="7" fill="#6fa65d"/>
+  <rect x="710" y="235" width="14" height="110" rx="7" fill="#6fa65d"/>
+  <ellipse cx="400" cy="360" rx="150" ry="56" fill="#5d9f67"/>
+  <ellipse cx="400" cy="302" rx="92" ry="75" fill="#82c873"/>
+  <circle cx="355" cy="252" r="30" fill="#82c873"/>
+  <circle cx="445" cy="252" r="30" fill="#82c873"/>
+  <circle cx="355" cy="252" r="16" fill="#fff"/>
+  <circle cx="445" cy="252" r="16" fill="#fff"/>
+  <circle cx="357" cy="253" r="7" fill="#1f3d35"/>
+  <circle cx="447" cy="253" r="7" fill="#1f3d35"/>
+  <ellipse cx="400" cy="317" rx="46" ry="32" fill="#edf8e6"/>
+  <path d="M372 329 Q400 345 428 329" fill="none" stroke="#2f5145" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="532" cy="150" r="10" fill="#ffffff88"/>
+  <circle cx="560" cy="180" r="14" fill="#ffffff88"/>
+  <circle cx="590" cy="145" r="8" fill="#ffffff88"/>
+  <text x="400" y="72" font-size="40" text-anchor="middle" fill="#2d5b4f" font-family="Verdana, sans-serif">Pond Peek</text>
+</svg>

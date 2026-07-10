@@ -440,6 +440,59 @@ button:active {
   margin-bottom: 12px;
 }
 
+.frog-gallery {
+  position: relative;
+  min-height: 235px;
+}
+
+.frog-photo-card {
+  margin: 0;
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(35, 67, 56, 0.14);
+  opacity: 0;
+  transform: translateY(6px) scale(0.985);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.frog-photo-card.is-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.frog-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.frog-photo-card figcaption {
+  padding: 12px 14px 14px;
+  color: #48685d;
+  font-weight: 600;
+}
+
+.gallery-controls {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.night-mode .frog-photo-card {
+  background: rgba(28, 48, 54, 0.92);
+}
+
+.night-mode .frog-photo-card figcaption {
+  color: #d4ece9;
+}
+
 @media (max-width: 900px) {
   .content-grid {
     grid-template-columns: 1fr;
@@ -447,5 +500,9 @@ button:active {
 
   .hero {
     flex-direction: column;
+  }
+
+  .frog-gallery {
+    min-height: 205px;
   }
 }
