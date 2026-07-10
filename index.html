@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Froggy Pond</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <h1>Cozy Froggy Pond</h1>
+        <p>Pet the frogs, feed them snacks, learn their favorite pond facts, and enjoy mushroom magic.</p>
+      </div>
+      <div class="score-panel">
+        <div class="score-item">
+          <span class="score-label">Pet count</span>
+          <strong id="petCount">0</strong>
+        </div>
+        <div class="score-item">
+          <span class="score-label">Snack time</span>
+          <strong id="feedCount">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <section class="pond-panel">
+        <div class="pond-scene">
+          <div class="lily-pad lily-pad-1"></div>
+          <div class="lily-pad lily-pad-2"></div>
+          <div class="frog-card poppy" id="frogCard">
+            <div class="frog" id="frog"></div>
+            <div class="frog-face"></div>
+          </div>
+          <div class="frog-mini frog-mini-1"></div>
+          <div class="frog-mini frog-mini-2"></div>
+          <div class="bubble bubble-1"></div>
+          <div class="bubble bubble-2"></div>
+          <div class="bubble bubble-3"></div>
+          <div class="mushroom mushroom-1" data-mushroom="Mushroom Puff"></div>
+          <div class="mushroom mushroom-2" data-mushroom="Glowcap"></div>
+          <div class="mushroom mushroom-3" data-mushroom="Soft Spore"></div>
+        </div>
+      </section>
+
+      <section class="control-panel">
+        <div class="card card-actions">
+          <h2>Frog Care</h2>
+          <p class="description">Tap the buttons to interact with your pond pal.</p>
+          <div class="button-grid">
+            <button id="petButton">Pet the frog</button>
+            <button id="feedButton">Feed a bug</button>
+            <button id="factButton">Learn a fact</button>
+            <button id="modeToggle" class="mode-toggle">Night mode</button>
+          </div>
+          <div class="status-box" id="statusBox">Hello! The frogs are ready for snuggles and snacks.</div>
+        </div>
+
+        <div class="card card-friends">
+          <h2>Frog Friends</h2>
+          <p class="description">Choose a cozy pal to care for.</p>
+          <div class="friend-grid">
+            <button class="frog-friend active" data-frog="Poppy">Poppy</button>
+            <button class="frog-friend" data-frog="Luna">Luna</button>
+            <button class="frog-friend" data-frog="Moss">Moss</button>
+          </div>
+          <p class="friend-note">Playing with <strong id="selectedFrog">Poppy</strong> now.</p>
+        </div>
+
+        <div class="card card-facts">
+          <h2>Frog Facts</h2>
+          <ul id="factList">
+            <li>Frogs have been around for more than 200 million years.</li>
+            <li>Most frogs drink water through their skin, not their mouths.</li>
+            <li>Mushrooms help keep the forest floor cozy and full of life.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
